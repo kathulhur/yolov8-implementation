@@ -1,0 +1,1 @@
+from .yolov8 import builder_class
