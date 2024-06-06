@@ -1,5 +1,6 @@
 import pathlib
 from ultralytics import YOLO
+from implementation.abstraction import FilePath
 from . import abstraction
 
 MODULE_DIR = pathlib.Path(__file__).parent
@@ -13,7 +14,7 @@ class YOLOv8Model(abstraction.Model):
     def __init__(self, model): # accepts the yolo object that it will encapsulate
         self.model: YOLO = model
 
-    def infer(self, input_file_paths):
+    def infer(self, input_file_paths: FilePath) -> abstraction.InferenceResult:
         # the yolov8 model expects a single input file
         input_file_path = input_file_paths[0]
         
@@ -42,10 +43,10 @@ class YOLOv8ModelBuilder(abstraction.ModelBuilder):
             model_file_paths: the model artifacts
         """
         self.model_file_paths = model_artifacts_paths
-
-    def build_model(self):
+    
+    def build(self, model_file_paths: FilePath) -> abstraction.Model:
         # the model builder expects only a single file artifact
-        model_weights = self.model_file_paths[0]
+        model_weights = model_file_paths[0]
 
         yolo = YOLO(str(model_weights)) # the yolov8 inferencing class is instantiated
 
