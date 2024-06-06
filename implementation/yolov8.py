@@ -54,3 +54,8 @@ class YOLOv8ModelBuilder(abstraction.ModelBuilder):
 
 
 builder_class = YOLOv8ModelBuilder
+
+inference_metadata = {
+    'input_files': [ ['image'] ],
+    'model_artifacts': [ ['.pt'] ]
+}

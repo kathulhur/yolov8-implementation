@@ -1,1 +1,1 @@
-from .yolov8 import builder_class
+from .yolov8 import builder_class, inference_metadata
