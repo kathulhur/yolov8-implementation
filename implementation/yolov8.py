@@ -1,6 +1,6 @@
 import pathlib
 from ultralytics import YOLO
-from implementation.abstraction import FilePath
+from .abstraction import FilePath
 from . import abstraction
 
 MODULE_DIR = pathlib.Path(__file__).parent
