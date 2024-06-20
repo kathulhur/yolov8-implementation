@@ -59,7 +59,7 @@ class YOLOv8Model(abstraction.Model):
             # END: model inference logic
 
             return {
-                'data': prediction_output_file_mp4_path, # the file path of the output
+                'data': str(prediction_output_file_mp4_path), # the file path of the output
                 'info': {'any': 'info'}, # any information related to the inference result
                 'type': "video/mp4" # MIME type of the output
             }
