@@ -79,7 +79,7 @@ class YOLOv8ModelBuilder(abstraction.ModelBuilder):
 
 
 
-builder_class = YOLOv8ModelBuilder
+model_builder_class = YOLOv8ModelBuilder
 
 inference_metadata = {
     'input_files': [ ['image', 'video'] ], # requires a single input file with an image type
