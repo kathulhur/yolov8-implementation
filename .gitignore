@@ -1,7 +1,4 @@
 __pycache__/
 requirements.txt
 output/
-assets/
 env/
-
-main.py
