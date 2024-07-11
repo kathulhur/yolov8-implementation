@@ -4,7 +4,7 @@ FilePath = str
 
 
 InferenceResult = TypedDict('InferenceResult', {
-    'data': FilePath,
+    'output': FilePath,
     'type': str,
     'info': dict
 })
